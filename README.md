@@ -1,5 +1,9 @@
-# vuechatv1
-![SPA, PWA]("https://github.com/AlekseyFedorov27/vue-Messenger/blob/master/messendger.png")
+# Vue messenger
+
+![SPA, PWA](https://github.com/AlekseyFedorov27/vue-Messenger/blob/master/messendger.png "Vue messenger")
+
+
+##change firebase your data in main.js
 
 ## Project setup
 ```
