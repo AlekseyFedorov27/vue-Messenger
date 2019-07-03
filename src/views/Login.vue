@@ -9,14 +9,14 @@
   <h3 class="headline mb-0">Log in</h3>
 
     <v-text-field
-      v-model="email"
+      v-model.trim="email"
       :rules="emailRules"
       label="E-mail"
       required
     ></v-text-field>
 
     <v-text-field
-      v-model="password"
+      v-model.trim="password"
       :counter="10"
       :rules="passwordRules"
       label="Password"
@@ -62,17 +62,20 @@
 
     }),
     methods: {
-      validate () {
-        if (this.$refs.form.validate()) {
-          this.snackbar = true
-          let user = {
-            email: this.email,
-            password: this.password
+      async validate () {
+        try { if (this.$refs.form.validate()) {
+            this.snackbar = true
+            let user = {
+              email: this.email,
+              password: this.password
+            }
+            await this.$store.dispatch('loginUser', user);
+            // console.log(user)
           }
-          this.$store.dispatch('loginUser', user);
-          // console.log(user)
           this.$router.push('/')
-        }
+        } catch (e) {
+          // console.log(e)
+        }  
       },
       reset () {
         this.$refs.form.reset()
@@ -80,6 +83,9 @@
       resetValidation () {
         this.$refs.form.resetValidation()
       }
+    },
+    created() {
+      this.$store.dispatch('initAuth')
     }
   }
 </script>

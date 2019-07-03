@@ -1,5 +1,5 @@
-# vue Messenger
-## vue, vuerouter, vuex, vuetify, firebase
+# vuechatv1
+
 ## Project setup
 ```
 npm install
@@ -27,4 +27,3 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-# VueMessanger

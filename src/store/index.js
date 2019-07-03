@@ -34,7 +34,7 @@ export default new Vuex.Store({
         // const info = (await firebase.database().ref(`/users`).once('value')).val()
         const info = await firebase.database().ref(`/users`).on('value', function(snapshot) {
 
-          console.log( snapshot.val())
+          // console.log( snapshot.val())
           //получаем всех юзеров
           const allUsers = []
           for (let key in snapshot.val()) {

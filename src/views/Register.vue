@@ -9,7 +9,7 @@
   >
   <h3 class="headline mb-0">Register</h3>
     <v-text-field
-      v-model="name"
+      v-model.trim="name"
       :counter="10"
       :rules="nameRules"
       label="Name"
@@ -17,7 +17,7 @@
     ></v-text-field>
 
     <v-text-field
-      v-model="email"
+      v-model.trim="email"
       :rules="emailRules"
       label="E-mail"
       required
@@ -73,17 +73,20 @@
       ],
     }),
     methods: {
-      validate () {
-        if (this.$refs.form.validate()) {
-          this.snackbar = true
-          let user = {
-            name: this.name,
-            email: this.email,
-            password: this.password
+    async validate () {
+        try { if (this.$refs.form.validate()) {
+            this.snackbar = true
+            let user = {
+              name: this.name,
+              email: this.email,
+              password: this.password
+            }
+            await this.$store.dispatch('authUser', user)
           }
-          this.$store.dispatch('authUser', user)
           this.$router.push('/')
-        }
+        } catch (e) {
+          // console.log(e)
+        }    
       },
       reset () {
         this.$refs.form.reset()

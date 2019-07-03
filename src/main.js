@@ -15,13 +15,13 @@ Vue.config.productionTip = false
 
   // Your web app's Firebase configuration
   firebase.initializeApp({
-    apiKey: xxxxxxx,
-    authDomain: xxxxxxxxxxx ,
-    databaseURL: xxxxxxxxxx,
-    projectId: xxxxxxxxxxx,
-    storageBucket: xxxxxxxxxxxx,
+    apiKey: xxxxxxxxxx,
+    authDomain: xxxxxxxxxxxx,
+    databaseURL: xxxxxxxxxxxx,
+    projectId: xxxxxxxxxxxxxx,
+    storageBucket: xxxxxxxxxxxxxx,
     messagingSenderId: xxxxxxxxxxxx,
-    appId: xxxxxxxxxxxxx
+    appId: xxxxxxxxxxxxxxx
   });
   // Initialize Firebase
  

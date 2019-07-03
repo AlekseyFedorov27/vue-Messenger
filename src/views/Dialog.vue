@@ -85,6 +85,7 @@ import inputMess from '@/components/inputMessage'
         // console.log(this.loadMessages)
         this.$store.dispatch('addMessage', post);
       }
+      
     },
     computed: {
       loadMes() {
@@ -100,7 +101,7 @@ import inputMess from '@/components/inputMessage'
 }
 .messag_inp{
   z-index: 199;
-  bottom: 10px;
+  bottom: 0px;
   position: absolute;
   left: 0px;
   width: 100%;

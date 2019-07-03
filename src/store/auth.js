@@ -37,6 +37,7 @@ export default {
     async logout({commit}) {
       await firebase.auth().signOut()
        commit('logout')
+       localStorage.removeItem ('user')
     },
     async loginUser ({dispatch, commit}, loginData){
       try{
@@ -52,8 +53,17 @@ export default {
     getUid(state){
       const user = firebase.auth().currentUser
       state.uid = user.uid;
+      localStorage.setItem ('user', user)
       return user ? user.uid : null
     },
+    initAuth ({commit, state}) {
+      let user = localStorage.getItem ('user')
+      if ( !user ) {
+        return false
+      }
+      state.uid = user;
+      commit('userUid');
+    }
 
   },
 }
