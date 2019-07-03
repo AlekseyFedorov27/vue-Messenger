@@ -1,5 +1,5 @@
-# vuechatv1
-
+# vueMessanger
+## vue, vuerouter, vuex, vuetify, firebase
 ## Project setup
 ```
 npm install
