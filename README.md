@@ -1,5 +1,5 @@
 # vuechatv1
-
+![SPA, PWA](https://github.com/AlekseyFedorov27/Vue-Progect/blob/master/weather%20spa.png "DEMO weather")
 ## Project setup
 ```
 npm install
