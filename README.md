@@ -1,4 +1,4 @@
-# vueMessanger
+# vue Messenger
 ## vue, vuerouter, vuex, vuetify, firebase
 ## Project setup
 ```
